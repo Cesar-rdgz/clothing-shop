@@ -7,15 +7,15 @@ import { ReactComponent as Logo } from "../../assets/crown.svg";
 const Navigation = () => {
   return (
     <Fragment>
-      <div className='navigation'>
-        <Link className="logo-container" to='/'>
+      <div className="navigation">
+        <Link className="logo-container" to="/">
           <Logo className="logo" />
         </Link>
         <div className="nav-links-container">
-          <Link className="nav-link" to='/shop'>
+          <Link className="nav-link" to="/shop">
             SHOP
           </Link>
-          <Link className="nav-link" to='/signIn'>
+          <Link className="nav-link" to="/auth">
             SIGN IN
           </Link>
         </div>
