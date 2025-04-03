@@ -25,19 +25,16 @@ const SignInForm = () => {
   };
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const handleSumbit = async (event) => {
     event.preventDefault();
     try {
-      console.log(email, password);
       const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      console.log(user);
       resetFormFields();
     } catch (error) {
       if (
